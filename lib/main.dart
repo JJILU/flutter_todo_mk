@@ -12,16 +12,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       // App default colors
-      theme: ThemeData(primarySwatch: Colors.yellow,
-       appBarTheme: AppBarTheme(
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
+        primaryColor: Colors.yellow, // Explicitly set the primary color
+        appBarTheme: AppBarTheme(
           color: Colors.yellow,
-          titleTextStyle: TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.w500),
+          titleTextStyle: TextStyle(
+              color: Colors.black, fontSize: 20, fontWeight: FontWeight.w500),
           iconTheme: IconThemeData(color: Colors.black),
-          ),
+        ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: Colors.yellow,
+          foregroundColor: Colors.black,
+        ),
       ),
     );
   }
